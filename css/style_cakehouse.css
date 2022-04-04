@@ -559,7 +559,8 @@ header .wrap ul li a img{display: block; height: 48px;
     margin: 0 auto;
     position: absolute;
     z-index: 10;
-    left: 370px;
+    /* left: 370px; */
+    margin-left: 370px;
     top: 0;
 }
 #map .wrap .info_box{
@@ -688,6 +689,7 @@ header .wrap ul li a img{display: block; height: 48px;
 #footer .top_space .wrap .list_space .box h4{
     font-size: 20px;
     margin-bottom: 20px;
+    color: #eee;
 }
 #footer .top_space .wrap .list_space .box ul{}
 #footer .top_space .wrap .list_space .box ul li{
