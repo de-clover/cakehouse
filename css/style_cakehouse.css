@@ -613,8 +613,7 @@ header .wrap ul li a img{display: block; height: 48px;
 #map .wrap .info_box button:active{
     box-shadow: 
         /* inset 2px 2px 4px rgba(0, 0, 0, 0.25); */
-        inset: -2px -2px 4px rgba(255, 255, 255, 0.4);
-
+        inset -2px -2px 4px rgba(255, 255, 255, 0.4);
 }
 #map .wrap .info_box button span{
     display: block;
