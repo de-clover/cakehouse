@@ -1,0 +1,210 @@
+cakehouse
+
+
+https://ajw1079.github.io/cakehouse/
+
+내 코드 
+
+    <header>
+        <nav>
+            <div class="top">
+                <div class="wrap">
+                    <ul class="contact">
+                        <li><img src="./img/phone.png" alt=""><span>+45-827-3846</span></li>
+                        <li><img src="./img/email.png" alt=""><span>cb_chef@cb.br</span></li>
+                    </ul>
+                    <ul class="sns">
+                        <li><a href="#"><img src="./img/sns-icon/youtube.png" alt=""></a></li>
+                        <li><a href="#"><img src="./img/sns-icon/pinterest.png" alt=""></a></li>
+                        <li><a href="#"><img src="./img/sns-icon/facebook.png" alt=""></a></li>
+                        <li><a href="#"><img src="./img/sns-icon/insta.png" alt=""></a></li>
+                        <li><a href="#"><img src="./img/sns-icon/twitter.png" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main">
+                <div class="wrap">
+                    <ul>
+                        <li><a href="">Cakes</a></li>
+                        <li><a href="">Service</a></li>
+                        <li><a href=""><img src="./img/logo.png" alt=""></a></li>
+                        <li><a href="">Chefs</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+--------------------------------
+/* header */
+
+header{
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.5);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header nav{
+    width: 100%;
+    height: auto;
+}
+
+header nav .top{
+    width: 100%;
+    height: auto;
+    background-color: #f295b2;
+}
+header nav .top .wrap{
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+header nav .top .wrap ul.contact{
+    height: 100%;
+    /* width: 280px; */
+    font-size: 14px;
+    color: #fff;
+    display: flex;
+}
+header nav .top .wrap ul.contact li{
+    font-size: 14px;
+    line-height: 1;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+}
+header nav .top .wrap ul.contact li img{
+    display: block;
+    filter : brightness(0) invert(100%);
+    height: 14px;
+    padding-right: 6px;
+}
+header nav .top .wrap ul.contact li span{}
+
+
+header nav .top .wrap ul.sns{
+    display: flex;
+}
+header nav .top .wrap ul.sns li{
+    display: flex;
+    align-items: center;
+}
+header nav .top .wrap ul.sns li a{
+    height: 16px;
+}
+header nav .top .wrap ul.sns li a img{
+    display: block;
+    filter : brightness(0) invert(100%);
+    padding-left: 10px;
+    height: 100%;
+    
+}
+header nav .top .wrap ul.sns li:first-child a img{
+    padding-left: 0;
+}
+
+header nav .main{
+    width: 100%;
+    height: auto;
+}
+header nav .main .wrap{
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+}
+header nav .main .wrap ul{
+    width: 100%;
+    height: 100%;
+    /* background-color: #eee; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav .main .wrap ul li{
+    width: calc(100% / 6 - 20px);
+    margin: 0 10px;
+}
+header nav .main .wrap ul li a{
+    display: block;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    color: #555;
+}
+header nav .main .wrap ul li a img{
+    height: 40px;
+}
+
+#main1{
+    height: 500px;
+    background-size: cover;
+    animation: 24s fadeInImg infinite;
+}
+
+@keyframes fadeInImg{
+    0%{background-image: url(../img/main_bg_01.jpg);background-position: 0% 50%;}
+    33.33%{background-image: url(../img/main_bg_02.jpg);background-position: 100% 100%;}
+    66.66%{background-image: url(../img/main_bg_03.jpg);background-position: 25% 100%;}
+    100%{background-image: url(../img/main_bg_04.jpg);background-position: 0% 50%;}
+}
+
+#main1 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#main1 .wrap .text_part{
+    position: absolute;
+    width: calc(100% / 12 * 7);
+    padding: 0 10px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#main1 .wrap .text_part .title{
+    display: block;
+    color: #fff;
+}
+#main1 .wrap .text_part .title h1{
+    font-size: 48px;
+    line-height: 60px;
+}
+#main1 .wrap .text_part p{
+    color: #fff;
+    font-size: 18px;
+    padding: 40px 0 30px;
+    line-height: 30px;
+        display: flex;
+        justify-content: flex-start;
+}
+#main1 .wrap .text_part a{
+    display: block;
+    background-color: #fff;
+    color: #555;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    /* line-height: 50px; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    transition: background-color 0.5s, color, 0.5s;
+}
+#main1 .wrap .text_part a:hover{
+    color: #fff;
+    background-color: #f295b2;
+}

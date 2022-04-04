@@ -1,0 +1,180 @@
+    <section id="main3">
+        <div class="wrap">
+            <div class="title_part">
+                <h2>Offer Services</h2>
+                <div class="bar"></div>
+            </div>
+            <div class="cont_part">
+                <!-- 1 -->
+                <div class="box">
+                    <div class="inner">
+                        <div class="icon">
+                            <img src="./img/offer-1.png" alt="Cup Cake Image">
+                        </div>
+                        <div class="txtBox">
+                            <h4>Cookie Cakes</h4>
+                            <p>We offer the best cookies cakes. We can send out a delicious treats on your behalf.</p>
+                        </div>
+                    </div>
+                    <a href="" class="moreBtn">More</a>
+                </div>
+                <!-- 2 -->
+                <div class="box">
+                    <div class="inner">
+                        <div class="icon">
+                            <img src="./img/offer-2.png" alt="Cup Cake Image">
+                        </div>
+                        <div class="txtBox">
+                            <h4>Tasty Cupcakes</h4>
+                            <p>Our Tasty cupcakes are so tasty that if you taste once you will fall in love instantly.</p>
+                        </div>
+                    </div>
+                    <a href="" class="moreBtn">More</a>
+                </div>
+                <!-- 3 -->
+                <div class="box">
+                    <div class="inner">
+                        <div class="icon">
+                            <img src="./img/offer-3.png" alt="Cup Cake Image">
+                        </div>
+                        <div class="txtBox">
+                            <h4>Wedding Cakes</h4>
+                            <p>CELEBRATE YOUR TEAM, THANK 
+                                COLLEAGUES AND IMPRESS CLIENTS WITH SOMETHING SWEET AND MEMORABLE!</p>
+                        </div>
+                    </div>
+                    <a href="" class="moreBtn">More</a>
+                </div>
+                <!-- 4 -->
+                <div class="box">
+                    <div class="inner">
+                        <div class="icon">
+                            <img src="./img/offer-4.png" alt="Cup Cake Image">
+                        </div>
+                        <div class="txtBox">
+                            <h4>Awesome Recipes</h4>
+                            <p>These old methods of baking were almost completely eradicated when these new methods were introduced and became industrialised.</p>
+                        </div>
+                    </div>
+                    <a href="" class="moreBtn">More</a>
+                </div>
+                <!-- 5 -->
+                <div class="box">
+                    <div class="inner">
+                        <div class="icon">
+                            <img src="./img/offer-5.png" alt="Cup Cake Image">
+                        </div>
+                        <div class="txtBox">
+                            <h4>Menu Planner</h4>
+                            <p>A light, sour wheat dough with 
+                                roasted walnuts and freshly picked rosemary, thyme, poppy seeds, parsley and sage.</p>
+                        </div>
+                    </div>
+                    <a href="" class="moreBtn">More</a>
+                </div>
+
+                <!-- 6 -->
+                <div class="box">
+                    <div class="inner">
+                        <div class="icon">
+                            <img src="./img/offer-6.png" alt="Cup Cake Image">
+                        </div>
+                        <div class="txtBox">
+                            <h4>Home Delivery</h4>
+                            <p>you find our competitors offering better quality for even same price, we will offer you same product for free.</p>
+                        </div>
+                    </div>
+                    <a href="" class="moreBtn">More</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+
+/***** #main3 part(offer) *****/
+#main3{background-color: #f295b2;}
+#main3 .wrap{
+    width: 1200px; 
+    margin: 0 auto; 
+    padding: 100px 10px;
+}
+#main3 .wrap .title_part{
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column; /*기존 X축, Y축을 회전(직각만큼)*/
+    align-items: center;
+    /* background: #000; */
+}
+#main3 .wrap .title_part h2{
+    font-size: 48px;
+    line-height: 60px;
+    /* text-align: center; */
+    color:#fff;
+    padding-bottom: 38px;
+}
+#main3 .wrap .title_part .bar{
+    width: 120px; height: 2px;
+    background-color: #fff;
+    /* margin: 0 auto; */
+}
+#main3 .wrap .cont_part{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+#main3 .wrap .cont_part .box{
+    width: calc(100% / 3 - 20px); height: 200px;
+    border:2px dashed #fff;
+    margin: 0 10px 20px;
+    padding: 18px;
+    color:#fff;
+    position: relative;
+    transition: background-color 0.5s, color 0.5s;
+}
+#main3 .wrap .cont_part .box:hover{background-color: #fff; color:#555;}
+
+#main3 .wrap .cont_part .box .inner{
+    display: flex; 
+    flex-wrap: wrap;
+    /* background-color: #faf; */
+    height: 160px;
+}
+#main3 .wrap .cont_part .box .inner .icon{width: 60px; text-align: center;}
+#main3 .wrap .cont_part .box .inner .icon img{
+    display: block;
+    filter:brightness(0) invert(100%);
+    transition: filter 0.5s;
+}
+#main3 .wrap .cont_part .box:hover .inner .icon img{
+    filter:brightness(0) invert(31.25%);
+}
+
+#main3 .wrap .cont_part .box .inner .txtBox{width: calc(100% - 60px); padding-left: 20px;}
+#main3 .wrap .cont_part .box .inner .txtBox h4{font-size: 20px; line-height: 30px; padding-bottom: 10px;}
+#main3 .wrap .cont_part .box .inner .txtBox p{font-size: 14px; font-weight: 300;}
+
+#main3 .wrap .cont_part .box .moreBtn{
+    position: absolute; 
+    right: 18px; bottom: 18px; 
+    background-color: #fff; 
+    display: block; 
+    width: 80px;
+    line-height: 20px;
+    border-radius: 10px;
+    color:#f295b2;
+    font-size: 14px; 
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.5s, color 0.5s;
+}
+/*position: absolute의 기준은 부모의 패딩 영역까지 (보더 두께는 제외된다.)*/
+#main3 .wrap .cont_part .box:hover .moreBtn{
+    background-color: #f295b2;
+    color:#fff;
+}
+#main3 .wrap .cont_part .box .moreBtn:hover{
+    box-shadow: 0 0 4px rgba(0,0,0,0.5); 
+    transition: box-shadow 0.5s;
+}
