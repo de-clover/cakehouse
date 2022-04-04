@@ -5,8 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cake House</title>
-    <link rel="shortcut icon" href="./img/favicon.png" type="imgae/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/style_cakehouse.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".cakesMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".cakes").offset().top -60}, 1000)
+                return false;
+            });
+            $(".serviceMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".service").offset().top -60}, 1000)
+                return false;
+            });
+            $(".chefsMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".chefs").offset().top -60}, 1000)
+                return false;
+            });
+            $(".contactMenu").click(function(){
+                $("html, body").animate({scrollTop:$(".contact").offset().top -60}, 1000)
+                return false;
+            });
+        });
+    </script>
+    
 </head>
 <body>
     <!-- <h3>중앙에 위치한 로고와 양측면에 위치한 메뉴들</h3>
@@ -45,11 +67,11 @@
     <header>
         <div class="wrap">
             <ul>
-                <li><a href="#">Cakes</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#"><img src="./img/logo.png" alt="케잌하우스 로고"></a></li>
-                <li><a href="#">Chefs</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="cakesMenu"><a href="#">Cakes</a></li>
+                <li class="serviceMenu"><a href="#">Service</a></li>
+                <li class="logoMenu"><a href="#"><img src="./img/logo.png" alt="케잌하우스 로고"></a></li>
+                <li class="chefsMenu"><a href="#">Chefs</a></li>
+                <li class="contactMenu"><a href="#">Contact</a></li>
             </ul>
         </div>
 
@@ -97,7 +119,7 @@
 -->
 
     <!-- ----------------- -->
-    <section id="cakes">
+    <section id="cakes" class="cakes">
         <div class="wrap">
             <div class="title_part">
                 <h2>Our Featured Cakes</h2>
@@ -172,7 +194,7 @@
         </div>
     </section>
 
-    <div id="offer">
+    <div id="offer" class="service">
         <div class="wrap">
             <h2>Offer Services</h2>
             <div class="bar"></div>
@@ -267,7 +289,7 @@
         </div>
     </div>
 
-    <div id="chefs">
+    <div id="chefs" class="chefs">
         <div class="wrap">
             <div class="txt_part">
                 <h2>Our Chefs</h2>
@@ -307,25 +329,31 @@
 
 
     
-    <div id="map">
-        <div id="mapG"></div>
+    <section id="map" class="contact">
+        <div id="map_space"></div>
         <div class="wrap">
             <div class="info_box">
                 <h2>Contact Us</h2>
-                <h3>Our Company is the best, meet the 
+                <p>Our Company is the best, meet the 
                     creative team that never sleeps. Say 
                     something to us we will answer to you.
-                </h3>
+                </p>
                 <div class="input_space">
-                    <input type="text" value="name">
-                    <input type="email" value="EMAIL">
-                    <input type="tel" value="PHONE NUMBER">
-                    <input type="text" value="YOUR MESSAGE">
+                    <form action="" method="post">
+                        <input type="text" name="name" placeholder="NAME" autocomplete="off" required>
+                        <input type="email" name="email" placeholder="EMAIL" autocomplete="off" required>
+                        <input type="number" name="phone" placeholder="PHONE NUMBER" autocomplete="off" required>
+                        <input type="text" name="inquiry" placeholder="YOUR MESSAGE" autocomplete="off">
+                    </form> 
                  </div>
-                <a href=""><span>SEND MESSAGE</span></a>
+                <button type="submit"><span>SEND MESSAGE</span></button>
             </div>
        </div>
-    </div>    
+    </section>    
+
+    <!--                  
+        <button type="submit"><img src="./img/submit_icon.png" alt=""><span>SEND MESSAGE</span></button>
+     -->
 
     <div id="footer">
         <div class="top_space">
@@ -388,7 +416,7 @@
             }; //lat(latitude, 위도), lng(longitude, 경도)
             var map = new google
                 .maps
-                .Map(document.getElementById('mapG'), {
+                .Map(document.getElementById('map_space'), {
                     zoom: 17,
                     center: uluru
                 });
@@ -397,7 +425,7 @@
                 .Marker({position: uluru, map: map});
         }
     </script>
-    
+
 
 </body>
 </html>

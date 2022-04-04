@@ -445,6 +445,7 @@ header .wrap ul li a img{display: block; height: 48px;
     line-height: 24px;
     border-radius: 12px;
     transition: box-shadow 0.5s;
+    transition: background-color 0.5s;
 }
 #offer .wrap .cont .box:hover{
     background-color: #fff;
@@ -461,9 +462,7 @@ header .wrap ul li a img{display: block; height: 48px;
     box-shadow: 1px 0 10px #aaa ;
 }
 
-
 /* chefs */
-
 #chefs{
     width: 100%;
     height: 630px;
@@ -476,22 +475,23 @@ header .wrap ul li a img{display: block; height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 #chefs .wrap > div{
-    width: 280px;
+    width: 25%;
     height: 430px;
     margin-right: 20px;
+    vertical-align: top;
 }
 #chefs .wrap > div:last-child{
     margin-right:0;
 }
 #chefs .wrap .txt_part{
     color: #555;
-    /* background-color: #ddd; */
 }
 #chefs .wrap .txt_part h2{
     font-size: 48px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
     line-height: 60px;
 }
 #chefs .wrap .txt_part p{
@@ -500,7 +500,8 @@ header .wrap ul li a img{display: block; height: 48px;
 }
 
 #chefs .wrap .pic_part{
-    /* background-color: #eee; */
+    overflow: hidden;
+    border-radius: 8px;
 }
 
 #chefs .wrap .pic_part:nth-child(2) .img{
@@ -516,17 +517,27 @@ header .wrap ul li a img{display: block; height: 48px;
     width: 280px;
     height: 280px;
     background-size: cover;
+    background-position: 50% 50%;
+    transition: transform 0.5s;
     margin-bottom: 24px;
+}
+#chefs .wrap .pic_part:hover .img{
+    transform: scale(1.05);
 }
 #chefs .wrap .pic_part h3{
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 24px;
+    color: #333;
 }
 #chefs .wrap .pic_part p{
     font-size: 14px;
+    color: #555;
 }
 
+
+
+/* map */
 
 #map{
     width: 100%;
@@ -535,7 +546,7 @@ header .wrap ul li a img{display: block; height: 48px;
     overflow: hidden;
 
 }
-#map #mapG{
+#map #map_space{
     width: 100%;
     height: 520px;
     z-index: 0
@@ -546,7 +557,6 @@ header .wrap ul li a img{display: block; height: 48px;
     height: 100%;
     padding: 0 10px;
     margin: 0 auto;
-    /* background-color: #999; */
     position: absolute;
     z-index: 10;
     left: 370px;
@@ -556,16 +566,16 @@ header .wrap ul li a img{display: block; height: 48px;
     color: #fff;
     width: 380px;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.7);
     padding: 40px;
-
+    text-align: center;
 }
 #map .wrap .info_box h2{
     font-size: 48px;
     padding-bottom: 20px;
     font-weight: bold;
 }
-#map .wrap .info_box h3{
+#map .wrap .info_box p{
     font-size: 14px;
     font-weight: normal;
 }
@@ -575,37 +585,52 @@ header .wrap ul li a img{display: block; height: 48px;
     
 }
 #map .wrap .info_box .input_space input{
-    color: #aaa;
+    color: #fff;
+    font-size: 16px;
     height: 30px;
     width: 300px;
+    padding: 0 10px;
     margin-bottom: 10px;
     border: none;
     background-color: transparent;
     border-bottom: 1px solid #fff;
-
 }
-#map .wrap .info_box a{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-
+#map .wrap .info_box .input_space input::placeholder{
+    color: #bbb;
 }
-#map .wrap .info_box a span{
+
+#map .wrap .info_box button{   
     width: 180px;
     height: 40px;
-    text-align: center;
-    font-size: 16px;
+    margin-top: 50px;
     background-color: #f295b2;
     border-radius: 20px;
+    text-align: center;
+    border: none;
+    transition: background-color 0.5s;
+    cursor: pointer;   
+}
+#map .wrap .info_box button:active{
+    box-shadow: 
+        /* inset 2px 2px 4px rgba(0, 0, 0, 0.25); */
+        inset: -2px -2px 4px rgba(255, 255, 255, 0.4);
+
+}
+#map .wrap .info_box button span{
+    display: block;
+    font-size: 16px;
     color: #fff;
     display: flex;
-    justify-content: center;
     align-items: center;
-    transition: box-shadow 0.5s;
+    justify-content: center;
 }
-#map .wrap .info_box a:hover span{
-    box-shadow: 1px 0 10px #aaa ;
+#map .wrap .info_box button:hover {
+    background-color: #fff;
 }
+#map .wrap .info_box button:hover span{
+    color: #f295b2;
+}
+
 
 
 /* footer */
@@ -681,7 +706,7 @@ header .wrap ul li a img{display: block; height: 48px;
     line-height: 18px;
     padding-bottom: 12px;
 }
-#footer .top_space .wrap .list_space .box ul li:first-child p, #footer .top_space .wrap .list_space .box ul li:last-child p{
+#footer .top_space .wrap .list_space .box:last-child ul li:first-child p, #footer .top_space .wrap .list_space .box:last-child ul li:last-child p{
     color: #f295b2;
     font-weight: bold;
 }
